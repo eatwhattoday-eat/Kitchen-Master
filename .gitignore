@@ -10,3 +10,6 @@ output/
 tmp/
 fix_list.json
 faces_detected.json
+
+# Keep ios project for CI
+!cook-vite/ios/
