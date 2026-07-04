@@ -16,10 +16,7 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Show available Xcode versions
-        run: ls /Applications/Xcode*.app
-
-      - name: Select latest Xcode
+      - name: Select Xcode 16
         run: sudo xcode-select -s /Applications/Xcode_16.app/Contents/Developer
 
       - name: Install dependencies
@@ -34,7 +31,7 @@ jobs:
       - name: Build iOS Archive
         run: |
           cd cook-vite/ios/App
-          xcodebuild -workspace App.xcworkspace \
+          xcodebuild -project App.xcodeproj \
             -scheme App \
             -sdk iphoneos \
             -configuration Release \
