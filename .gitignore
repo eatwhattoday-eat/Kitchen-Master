@@ -1,0 +1,12 @@
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.DS_Store
+*.badbak
+*.facebak
+*.oldbak
+output/
+tmp/
+fix_list.json
+faces_detected.json
